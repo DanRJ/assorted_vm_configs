@@ -1,0 +1,23 @@
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" NERDTree
+"au VimEnter * NERDTree
+
+" Bellsound
+set noerrorbells
+set visualbell
+set t_vb=
+	
+set number
+set autoindent
+set smartindent
+" When vimrc is editet, reload it
+autocmd! bufwritepost .vimrc source %
+" vim: set ft=vim :
+
+
+let g:NERDTreeWinPos = "left"
+set guioptions-=T " Removes top toolbar
+set guioptions-=r " Removes right hand scroll bar
+set go-=L "Removes left hand scroll bar

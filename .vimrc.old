@@ -1,0 +1,35 @@
+nmap gx <Plug>NetrwBrowseX
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+syntax on
+set backspace=indent,eol,start
+set fileencodings=ucs-bom,utf-8,default,latin1
+set helplang=en
+set history=500
+set nomodeline
+set printoptions=paper:a4
+set ruler
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+
+" Theme
+syntax enable
+set background=dark
+colorscheme solarized 
+
+let mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Bellsound
+set noerrorbells
+set visualbell
+set t_vb=
+	
+set number
+set autoindent
+set smartindent
+
+" When vimrc is editet, reload it
+autocmd! bufwritepost .vimrc source %
+" vim: set ft=vim :
